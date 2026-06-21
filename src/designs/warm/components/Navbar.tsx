@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
-import { business } from "../data/site";
+import { business } from "../../../data/site";
 import Logo from "./Logo";
 
 const links = [
@@ -26,36 +26,36 @@ export default function Navbar() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-white/90 shadow-[0_2px_20px_rgba(7,22,47,0.08)] backdrop-blur"
+          ? "bg-cream-50/90 shadow-[0_2px_24px_rgba(95,63,38,0.08)] backdrop-blur"
           : "bg-transparent"
       }`}
     >
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3">
+      <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3 sm:px-8">
         <Logo />
 
-        <div className="hidden items-center gap-8 md:flex">
+        <div className="hidden items-center gap-8 lg:flex">
           {links.map((l) => (
             <a
               key={l.href}
               href={l.href}
-              className="text-sm font-600 text-navy-700 transition-colors hover:text-gold-600"
+              className="text-sm font-600 text-wood-700 transition-colors hover:text-clay-500"
             >
               {l.label}
             </a>
           ))}
           <a
             href={`tel:${business.phoneHref}`}
-            className="inline-flex items-center gap-2 rounded-full bg-navy-800 px-4 py-2 text-sm font-600 text-white shadow-sm transition-transform hover:scale-[1.03] hover:bg-navy-700"
+            className="inline-flex items-center gap-2 rounded-full bg-wood-700 px-5 py-2.5 text-sm font-600 text-cream-50 shadow-sm transition-colors hover:bg-wood-600"
           >
-            <Phone className="h-4 w-4 text-gold-400" />
+            <Phone className="h-4 w-4 text-clay-300" />
             {business.phone}
           </a>
         </div>
 
         <button
-          className="grid h-10 w-10 place-items-center rounded-lg text-navy-800 md:hidden"
+          className="grid h-11 w-11 place-items-center rounded-xl text-wood-800 transition-colors hover:bg-cream-200 lg:hidden"
           onClick={() => setOpen((o) => !o)}
-          aria-label="Toggle menu"
+          aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
         >
           {open ? <X /> : <Menu />}
@@ -63,24 +63,24 @@ export default function Navbar() {
       </nav>
 
       {open && (
-        <div className="border-t border-navy-800/10 bg-white px-5 py-4 md:hidden">
-          <div className="flex flex-col gap-1">
+        <div className="border-t border-cream-200 bg-cream-50 lg:hidden">
+          <div className="mx-auto flex max-w-6xl flex-col gap-1 px-5 py-4 sm:px-8">
             {links.map((l) => (
               <a
                 key={l.href}
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className="rounded-lg px-3 py-3 text-base font-600 text-navy-800 hover:bg-paper"
+                className="rounded-xl px-3 py-3 text-base font-600 text-wood-800 transition-colors hover:bg-cream-200"
               >
                 {l.label}
               </a>
             ))}
             <a
               href={`tel:${business.phoneHref}`}
-              className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-gold-500 px-4 py-3 text-base font-700 text-navy-900"
+              className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-clay-500 px-4 py-3 text-base font-700 text-cream-50"
             >
               <Phone className="h-5 w-5" />
-              {business.phone}
+              Call {business.phone}
             </a>
           </div>
         </div>

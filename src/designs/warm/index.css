@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Mulish", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", "Georgia", ui-serif, serif;
+
+  /* Warm & Crafted palette — natural pine, clay & sage */
+  --color-cream-50: #fdfaf4;
+  --color-cream-100: #faf3e7;
+  --color-cream-200: #f3e8d4;
+  --color-cream-300: #ead7ba;
+
+  --color-wood-300: #c79a6b;
+  --color-wood-400: #b07f4f;
+  --color-wood-500: #97663a;
+  --color-wood-600: #7c5230;
+  --color-wood-700: #5f3f26;
+  --color-wood-900: #3a2817;
+
+  --color-clay-300: #e3a583;
+  --color-clay-400: #d4825c;
+  --color-clay-500: #c1633c;
+  --color-clay-600: #a84e2c;
+
+  --color-sage-200: #cdd6c0;
+  --color-sage-400: #93a585;
+  --color-sage-500: #74886a;
+  --color-sage-600: #5c6e54;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  @apply bg-cream-50 text-wood-900 font-sans antialiased;
+}
+
+/* Soft warm paper texture overlay */
+.paper-grain {
+  background-image:
+    radial-gradient(circle at 20% 25%, rgba(193, 99, 60, 0.05), transparent 45%),
+    radial-gradient(circle at 80% 70%, rgba(116, 136, 106, 0.06), transparent 45%);
+}
+
+::selection {
+  background: var(--color-clay-400);
+  color: var(--color-cream-50);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

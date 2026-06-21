@@ -4,30 +4,160 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>White Wall Painting — Professional Painters in Tullamore, Co. Offaly</title>
-    <meta
-      name="description"
-      content="White Wall Painting offers professional interior & exterior painting for homes and commercial spaces in Tullamore and across Co. Offaly. Reliable, clean and local. Free quotes."
-    />
-    <meta name="theme-color" content="#0a1f44" />
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="White Wall Painting — Tullamore, Co. Offaly" />
-    <meta
-      property="og:description"
-      content="High-quality interior and exterior painting for your home or business. Reliable, clean, and local. Free quotes — call or WhatsApp."
-    />
-    <meta property="og:type" content="website" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <title>White Wall Painting — Design Preview</title>
+    <meta name="robots" content="noindex" />
+    <style>
+      :root {
+        --bar-h: 56px;
+      }
+      * { box-sizing: border-box; }
+      html, body {
+        margin: 0;
+        height: 100%;
+        background: #0a0a0a;
+        font-family: "Inter", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      }
+      #bar {
+        position: fixed;
+        inset: 0 0 auto 0;
+        height: var(--bar-h);
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        padding: 0 16px;
+        background: #0a0a0a;
+        color: #f4f2ee;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        z-index: 10;
+      }
+      #bar .brand {
+        font-weight: 700;
+        font-size: 14px;
+        letter-spacing: 0.02em;
+        white-space: nowrap;
+        opacity: 0.85;
+      }
+      #bar .brand b { color: #ff5a1f; }
+      .tabs {
+        display: flex;
+        gap: 6px;
+        background: rgba(255, 255, 255, 0.06);
+        padding: 4px;
+        border-radius: 999px;
+      }
+      .tab {
+        appearance: none;
+        border: 0;
+        cursor: pointer;
+        font: inherit;
+        font-weight: 600;
+        font-size: 13px;
+        color: rgba(244, 242, 238, 0.7);
+        background: transparent;
+        padding: 7px 16px;
+        border-radius: 999px;
+        transition: background 0.15s, color 0.15s;
+        white-space: nowrap;
+      }
+      .tab:hover { color: #fff; }
+      .tab[aria-selected="true"] {
+        background: #ff5a1f;
+        color: #0a0a0a;
+      }
+      .nav {
+        margin-left: auto;
+        display: flex;
+        gap: 6px;
+      }
+      .nav button {
+        appearance: none;
+        cursor: pointer;
+        width: 34px;
+        height: 34px;
+        border-radius: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        background: transparent;
+        color: #f4f2ee;
+        font-size: 16px;
+        line-height: 1;
+        display: grid;
+        place-items: center;
+      }
+      .nav button:hover { background: rgba(255, 255, 255, 0.1); }
+      .hint {
+        font-size: 12px;
+        color: rgba(244, 242, 238, 0.45);
+        white-space: nowrap;
+      }
+      @media (max-width: 640px) {
+        .brand, .hint { display: none; }
+      }
+      #frame {
+        position: fixed;
+        inset: var(--bar-h) 0 0 0;
+        width: 100%;
+        height: calc(100% - var(--bar-h));
+        border: 0;
+        background: #fff;
+      }
+    </style>
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <header id="bar">
+      <span class="brand">White&nbsp;Wall <b>·</b> design preview</span>
+      <div class="tabs" role="tablist" aria-label="Choose a design">
+        <button class="tab" role="tab" data-design="bold">Bold Editorial</button>
+        <button class="tab" role="tab" data-design="clean">Clean &amp; Trustworthy</button>
+        <button class="tab" role="tab" data-design="warm">Warm &amp; Crafted</button>
+      </div>
+      <div class="nav">
+        <button id="prev" title="Previous design (←)" aria-label="Previous design">‹</button>
+        <button id="next" title="Next design (→)" aria-label="Next design">›</button>
+      </div>
+      <span class="hint">Use ← / → to cycle</span>
+    </header>
+
+    <iframe id="frame" title="Design preview"></iframe>
+
+    <script>
+      const designs = ["bold", "clean", "warm"];
+      const frame = document.getElementById("frame");
+      const tabs = Array.from(document.querySelectorAll(".tab"));
+
+      function current() {
+        const fromHash = location.hash.replace("#", "");
+        if (designs.includes(fromHash)) return fromHash;
+        const saved = localStorage.getItem("ww-design");
+        return designs.includes(saved) ? saved : "bold";
+      }
+
+      function select(design) {
+        if (!designs.includes(design)) design = "bold";
+        frame.src = design + ".html";
+        localStorage.setItem("ww-design", design);
+        if (location.hash.replace("#", "") !== design) {
+          history.replaceState(null, "", "#" + design);
+        }
+        tabs.forEach((t) =>
+          t.setAttribute("aria-selected", String(t.dataset.design === design))
+        );
+      }
+
+      function cycle(dir) {
+        const i = designs.indexOf(current());
+        select(designs[(i + dir + designs.length) % designs.length]);
+      }
+
+      tabs.forEach((t) => t.addEventListener("click", () => select(t.dataset.design)));
+      document.getElementById("prev").addEventListener("click", () => cycle(-1));
+      document.getElementById("next").addEventListener("click", () => cycle(1));
+      window.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowLeft") cycle(-1);
+        if (e.key === "ArrowRight") cycle(1);
+      });
+      window.addEventListener("hashchange", () => select(current()));
+
+      select(current());
+    </script>
   </body>
 </html>
