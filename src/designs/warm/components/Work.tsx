@@ -8,15 +8,14 @@ export default function Work() {
     <section id="work" className="mx-auto max-w-6xl px-5 py-20 sm:px-8 lg:py-28">
       <Reveal className="mx-auto max-w-2xl text-center">
         <p className="text-sm font-700 uppercase tracking-[0.25em] text-clay-500">
-          The transformation
+          Before &amp; after
         </p>
         <h2 className="mt-3 font-display text-3xl font-600 tracking-tight text-wood-900 sm:text-4xl">
-          See the before &amp; after for yourself
+          See the before &amp; after
         </h2>
         <p className="mt-4 text-lg leading-relaxed text-wood-600">
-          A tired Tullamore staircase brought back to life — stripped, sanded and
-          finished to show off the warm natural pine. Drag the slider to reveal the
-          change.
+          A tired Tullamore staircase, stripped, sanded and finished to show off
+          the natural pine. Drag the slider to see the change.
         </p>
       </Reveal>
 
@@ -31,10 +30,9 @@ export default function Work() {
             Staircase &amp; banister restoration
           </h3>
           <p className="mt-4 leading-relaxed text-wood-600">
-            What started as patchy bare wood and clutter became a clean, warm
-            centrepiece for the whole hallway. Careful prep on every spindle, a
-            smooth finish on the handrail, and walls cut in by hand — the kind of
-            detail that makes a home feel cared for.
+            What started as patchy bare wood and clutter is now the centrepiece
+            of the hallway. Careful prep on every spindle, a smooth finish on the
+            handrail, and walls cut in by hand. It pulls the whole space together.
           </p>
           <ul className="mt-6 space-y-2.5">
             {[
@@ -77,12 +75,11 @@ export default function Work() {
               The finished home
             </p>
             <h3 className="mt-3 font-display text-2xl font-600 tracking-tight text-wood-900 sm:text-3xl">
-              A hallway that welcomes you home
+              A bright, clean hallway
             </h3>
             <p className="mt-4 leading-relaxed text-wood-600">
-              Fresh, bright paintwork, that warm restored staircase and a clean,
-              calm finish throughout. This is what we mean by treating your home
-              like our own.
+              Fresh paintwork, the restored pine staircase and a clean finish from
+              the front door through. A big change from where it started.
             </p>
             <a
               href={business.facebook}
@@ -114,12 +111,11 @@ export default function Work() {
             Kitchen &amp; dining
           </p>
           <h3 className="mt-3 font-display text-2xl font-600 tracking-tight text-wood-900 sm:text-3xl">
-            A brighter heart of the home
+            A brighter kitchen &amp; dining room
           </h3>
           <p className="mt-4 leading-relaxed text-wood-600">
-            Walls washed out and tired? A fresh coat, neatly cut in around windows
-            and units, lifts the whole open-plan space — and we leave it spotless,
-            ready to live in the same day.
+            Tired, marked walls given a fresh coat, neatly cut in around the
+            windows and units. We leave it clean and ready to use the same day.
           </p>
         </Reveal>
       </div>

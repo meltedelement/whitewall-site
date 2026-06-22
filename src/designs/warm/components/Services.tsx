@@ -42,8 +42,8 @@ export default function Services() {
                 Not sure what you need?
               </h3>
               <p className="mt-2.5 text-[0.95rem] leading-relaxed text-cream-200">
-                Tell us about your space and we'll recommend the right approach — and
-                give you a free, no-obligation quote.
+                Tell us about the space and we'll talk through what it needs and
+                give you a free quote.
               </p>
             </div>
             <a

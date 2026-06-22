@@ -35,15 +35,15 @@ export const whatsappLink = `https://wa.me/${business.whatsapp}?text=${encodeURI
 )}`;
 
 export const hero = {
-  eyebrow: "Professional painters · Tullamore, Co. Offaly",
-  title: "Professional painting for homes & commercial spaces",
+  eyebrow: "Painters in Tullamore, Co. Offaly",
+  title: "Painting for homes & commercial spaces",
   subtitle:
-    "High-quality interior and exterior painting for your home or business. Reliable, clean, and local — finished to a standard you can trust.",
+    "Interior and exterior painting for homes and businesses around Tullamore and the rest of Co. Offaly. Tidy work, fair prices, and we finish when we say we will.",
   trustBadges: [
-    "Reliable & Trusted",
-    "Satisfaction Guaranteed",
-    "Experienced & Professional",
-    "Serving Homes & Businesses",
+    "Free quotes",
+    "Tidy, careful work",
+    "Homes & businesses",
+    "Local to Co. Offaly",
   ],
 };
 
@@ -58,31 +58,31 @@ export const services: Service[] = [
     icon: Home,
     title: "Interior & Exterior Painting",
     description:
-      "Walls, ceilings, trim, doors and full exteriors — prepped properly and finished with premium paints for a flawless, lasting result.",
+      "Walls, ceilings, trim, doors and outside paintwork. We prep properly first so the finish holds up.",
   },
   {
     icon: Building2,
     title: "Homes & Commercial Spaces",
     description:
-      "From a single room to whole houses, offices, shops and rental properties — work scaled to fit the job, big or small.",
+      "A single room, a whole house, an office, shop or rental. Big or small, the job gets the same care.",
   },
   {
     icon: ShieldCheck,
-    title: "High-Quality, Long-Lasting Results",
+    title: "Good Prep, Solid Finish",
     description:
-      "Careful surface preparation and quality materials mean a finish that looks sharp and holds up for years to come.",
+      "Surfaces sanded, filled and primed before any colour goes on. That's what makes paint last.",
   },
   {
     icon: Clock,
-    title: "Clean Work & On-Time Delivery",
+    title: "Clean & On Time",
     description:
-      "Furniture protected, surfaces masked, everything tidied up after. We turn up when we say we will and finish on schedule.",
+      "Floors and furniture covered, everything tidied up after. We turn up when we say we will.",
   },
   {
     icon: Tag,
-    title: "Affordable Prices & Free Quotes",
+    title: "Fair Prices & Free Quotes",
     description:
-      "Honest, upfront pricing with no surprises. Get in touch for a free, no-obligation quote for your project.",
+      "Clear pricing before we start, so you know what it costs. Ask us for a free quote any time.",
   },
 ];
 
@@ -99,39 +99,39 @@ export const process: Step[] = [
     step: "01",
     title: "Free Quote",
     description:
-      "Call or WhatsApp us. We discuss your space, colours and timeline, then give you a clear, fixed price.",
+      "Call or message us. We look at the job, talk through colours and timing, and give you a fixed price.",
   },
   {
     icon: Brush,
     step: "02",
     title: "Prep & Protect",
     description:
-      "We mask, sand, fill and prime — covering floors and furniture so your home stays clean throughout.",
+      "We cover floors and furniture, then sand, fill and prime so the paint goes on right.",
   },
   {
     icon: Sparkles,
     step: "03",
-    title: "Perfect Finish",
+    title: "Paint & Tidy Up",
     description:
-      "Premium paints applied with care, a final walkthrough together, and a tidy space left ready to enjoy.",
+      "We paint, check it over with you, and leave the place clean and ready to use.",
   },
 ];
 
 export const features = [
   {
-    title: "Reliable & Trusted",
-    description: "Local, dependable and recommended by the customers we work for.",
+    title: "Local & Reliable",
+    description: "Based in Tullamore. Most of our work comes from word of mouth.",
   },
   {
-    title: "Satisfaction Guaranteed",
-    description: "We're not finished until you're happy with the result.",
+    title: "We Get It Right",
+    description: "We don't pack up until you're happy with how it looks.",
   },
   {
-    title: "Experienced & Professional",
-    description: "Skilled, careful work on every job, large or small.",
+    title: "Years On The Tools",
+    description: "Careful, skilled work on every job, big or small.",
   },
   {
-    title: "Serving Homes & Businesses",
+    title: "Homes & Businesses",
     description: "Covering Tullamore and the wider Co. Offaly area.",
   },
 ];

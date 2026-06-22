@@ -46,8 +46,8 @@ export default function Contact() {
                 Let's talk about your home
               </h2>
               <p className="mt-4 max-w-md text-cream-200">
-                Call or message {business.owner} about your project — you'll get a
-                friendly chat and honest, upfront pricing, with no obligation.
+                Call or message {business.owner} about the job. You'll get a straight
+                answer and a free quote, no pressure.
               </p>
 
               <div className="mt-9 space-y-5">

@@ -6,7 +6,6 @@ const sections = [
   { href: "#services", label: "Services" },
   { href: "#process", label: "Process" },
   { href: "#why", label: "Why us" },
-  { href: "#reviews", label: "Reviews" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -25,8 +24,8 @@ export default function Footer() {
         <div className="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr]">
           <div>
             <p className="max-w-sm leading-relaxed text-ink-400">
-              Professional interior &amp; exterior painting for homes and commercial
-              spaces. Reliable, clean and local — {business.tagline.toLowerCase()}.
+              Interior and exterior painting for homes and businesses across
+              Tullamore and Co. Offaly.
             </p>
             <div className="mt-5 flex items-center gap-2 text-sm text-ink-400">
               <MapPin size={16} className="text-accent-bright" aria-hidden="true" />

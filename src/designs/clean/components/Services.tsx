@@ -35,8 +35,8 @@ export default function Services() {
             <div>
               <h3 className="text-xl font-bold tracking-tight">Not sure what you need?</h3>
               <p className="mt-2.5 text-[0.95rem] leading-relaxed text-white/85">
-                Tell us about your space and we&apos;ll recommend the right approach — and give you a
-                free, no-obligation quote.
+                Tell us about the space and we&apos;ll talk through what it needs and
+                give you a free quote.
               </p>
             </div>
             <a

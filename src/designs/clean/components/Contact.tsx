@@ -46,8 +46,8 @@ export default function Contact() {
                 Free quote, no obligation
               </h2>
               <p className="mt-4 max-w-md text-white/85">
-                Call or message us about your project — we&apos;ll get back to you fast with honest,
-                upfront pricing.
+                Call or message us about the job. We&apos;ll get back to you quickly
+                with a price.
               </p>
 
               <div className="mt-9 space-y-5">

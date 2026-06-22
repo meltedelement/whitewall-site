@@ -69,8 +69,8 @@ export default function Contact() {
               no obligation
             </h2>
             <p className="mt-5 max-w-md leading-relaxed text-ink-400">
-              Call or message {business.owner} about your project — you&rsquo;ll get a fast
-              reply with honest, upfront pricing.
+              Call or message {business.owner} about the job. You&rsquo;ll get a quick
+              reply and a clear price.
             </p>
 
             <div className="mt-10 space-y-4">

@@ -11,8 +11,8 @@ export default function Footer() {
           <div>
             <Logo light />
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-white/60">
-              Professional interior &amp; exterior painting for homes and commercial spaces.
-              Reliable, clean and local — {business.tagline.toLowerCase()}.
+              Interior and exterior painting for homes and businesses across
+              Tullamore and Co. Offaly.
             </p>
             <div className="mt-5 flex items-center gap-2 text-sm text-white/60">
               <MapPin className="h-4 w-4 text-brand-400" />
@@ -26,7 +26,6 @@ export default function Footer() {
               <li><a href="#services" className="hover:text-brand-300">Services</a></li>
               <li><a href="#process" className="hover:text-brand-300">How it works</a></li>
               <li><a href="#work" className="hover:text-brand-300">Our work</a></li>
-              <li><a href="#reviews" className="hover:text-brand-300">Reviews</a></li>
               <li><a href="#contact" className="hover:text-brand-300">Contact</a></li>
             </ul>
           </div>

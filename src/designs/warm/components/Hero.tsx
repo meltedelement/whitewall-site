@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Phone, MessageCircle, MapPin, Star } from "lucide-react";
+import { Phone, MessageCircle, MapPin } from "lucide-react";
 import { business, whatsappLink } from "../../../data/site";
 
 export default function Hero() {
@@ -33,8 +33,8 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.05 }}
             className="mt-6 font-display text-[2.6rem] font-600 leading-[1.05] tracking-tight text-wood-900 sm:text-5xl lg:text-[3.75rem]"
           >
-            Local painters who treat your home like{" "}
-            <span className="italic text-clay-500">their own</span>
+            Painting &amp; decorating, done with{" "}
+            <span className="italic text-clay-500">care</span>
           </motion.h1>
 
           <motion.p
@@ -43,9 +43,9 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.12 }}
             className="mt-6 max-w-xl text-lg leading-relaxed text-wood-700"
           >
-            I'm {business.owner} — a Tullamore painter who cares about the small
-            details: tidy edges, warm finishes and a home left cleaner than we found
-            it. Honest prices, careful work, and a result you'll be proud of.
+            I'm {business.owner}, a painter based in Tullamore. I look after the
+            details that matter: tidy edges, a clean finish, and your home left as
+            we found it, just freshly painted. Fair prices and no pressure.
           </motion.p>
 
           <motion.div
@@ -78,13 +78,9 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.32 }}
             className="mt-10 flex items-center gap-4"
           >
-            <div className="flex gap-0.5 text-clay-500">
-              {Array.from({ length: 5 }).map((_, i) => (
-                <Star key={i} className="h-5 w-5 fill-current" />
-              ))}
-            </div>
+            <MapPin className="h-5 w-5 shrink-0 text-clay-500" />
             <p className="text-sm font-500 text-wood-600">
-              Trusted by homes &amp; businesses across Co. Offaly
+              Painting homes &amp; businesses across Co. Offaly
             </p>
           </motion.div>
         </div>

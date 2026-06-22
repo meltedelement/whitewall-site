@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Phone, MessageCircle, Check, Star, MapPin } from "lucide-react";
+import { Phone, MessageCircle, Check, MapPin } from "lucide-react";
 import { business, hero, whatsappLink } from "../../../data/site";
 
 export default function Hero() {
@@ -110,15 +110,11 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Floating rating chip */}
+          {/* Floating location chip */}
           <div className="absolute -bottom-5 -left-3 flex items-center gap-3 rounded-2xl bg-white px-4 py-3 shadow-lg ring-1 ring-ink-900/5 sm:-left-6">
-            <div className="flex gap-0.5 text-warm-500">
-              {Array.from({ length: 5 }).map((_, i) => (
-                <Star key={i} className="h-4 w-4 fill-current" />
-              ))}
-            </div>
+            <MapPin className="h-5 w-5 shrink-0 text-brand-500" />
             <div className="leading-tight">
-              <p className="text-sm font-bold text-ink-900">Trusted locally</p>
+              <p className="text-sm font-bold text-ink-900">Local painters</p>
               <p className="text-xs text-ink-500">{business.area}</p>
             </div>
           </div>

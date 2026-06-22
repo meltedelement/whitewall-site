@@ -20,9 +20,9 @@ export default function WhyUs() {
                 style={{ aspectRatio: "3 / 4", objectPosition: "center" }}
               />
               <div className="absolute bottom-0 left-0 bg-accent px-5 py-4">
-                <span className="display block text-4xl leading-none text-white">100%</span>
+                <span className="display block text-3xl leading-none text-white">Done right</span>
                 <span className="text-xs font-bold uppercase tracking-widest text-white/90">
-                  Satisfaction or it's not finished
+                  Spindles stripped &amp; repainted
                 </span>
               </div>
             </div>

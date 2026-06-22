@@ -26,7 +26,7 @@ export default function WhyUs() {
             A local craftsman you can rely on
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-cream-200">
-            No call centres, no faceless crews — just {business.owner}, a local
+            No call centres, no faceless crews. Just {business.owner}, a local
             Tullamore painter who turns up, does the job right and tidies up after.
           </p>
         </Reveal>

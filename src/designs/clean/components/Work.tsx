@@ -12,8 +12,7 @@ export default function Work() {
           See the difference for yourself
         </h2>
         <p className="mt-4 text-lg text-ink-700">
-          Drag the sliders to compare before and after — real results from recent jobs across
-          Co. Offaly.
+          Drag the sliders to compare before and after. A few recent jobs from around Co. Offaly.
         </p>
       </Reveal>
 
@@ -95,8 +94,8 @@ export default function Work() {
               <Sparkles className="h-5 w-5" />
             </span>
             <p className="text-[0.97rem] leading-relaxed text-ink-700">
-              Careful prep, premium finishes and a tidy site — that&apos;s the difference between
-              a paint job and a job well done.
+              Proper prep, good paint and a clean site at the end. That&apos;s what we turn up
+              to do.
             </p>
           </div>
           <a
